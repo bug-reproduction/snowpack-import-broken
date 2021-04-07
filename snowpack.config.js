@@ -4,22 +4,8 @@ module.exports = {
     public: {url: '/', static: true},
     src: {url: '/dist'},
   },
-  plugins: ['@snowpack/plugin-svelte', '@snowpack/plugin-dotenv'],
-  routes: [
-    /* Example: Enable an SPA Fallback in development: */
-    // {"match": "routes", "src": ".*", "dest": "/index.html"},
-  ],
+  plugins: ['@snowpack/plugin-svelte', '@snowpack/plugin-dotenv', '@snowpack/plugin-typescript'],
   optimize: {
-    /* Example: Bundle your final build: */
-    // "bundle": true,
-  },
-  packageOptions: {
-    /* ... */
-  },
-  devOptions: {
-    /* ... */
-  },
-  buildOptions: {
-    /* ... */
-  },
+    bundle: true
+  }
 };

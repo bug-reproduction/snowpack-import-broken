@@ -1,5 +1,6 @@
 <script lang="ts">
   import {onMount} from 'svelte';
+import Canvas from './Canvas.svelte';
   let count = 0;
   onMount(() => {
     const interval = setInterval(() => count++, 1000);
@@ -54,6 +55,8 @@
     }
   }
 </style>
+
+<Canvas/>
 
 <div class="App">
   <header class="App-header">
