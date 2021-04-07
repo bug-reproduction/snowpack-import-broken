@@ -1,8 +1,12 @@
 <script lang="ts">
   import {onMount} from 'svelte';
-import Canvas from './Canvas.svelte';
   let count = 0;
+  async function testing() {
+    const {test} = await import('./lib');
+    test("hello");
+  }
   onMount(() => {
+    testing();
     const interval = setInterval(() => count++, 1000);
     return () => {
       clearInterval(interval);
@@ -55,8 +59,6 @@ import Canvas from './Canvas.svelte';
     }
   }
 </style>
-
-<Canvas/>
 
 <div class="App">
   <header class="App-header">

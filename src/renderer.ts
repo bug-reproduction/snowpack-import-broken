@@ -1,12 +1,4 @@
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-///@ts-ignore
-import jollyRogerURI from './assets/jolly-roger.png';
-
 const jollyRogerImage = new Image();
-console.log(jollyRogerURI);
-jollyRogerImage.src = jollyRogerURI;
-
 export class Renderer {
   private ctx: CanvasRenderingContext2D;
   constructor(ctx: CanvasRenderingContext2D) {
